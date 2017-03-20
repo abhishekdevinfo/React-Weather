@@ -2,6 +2,13 @@ var express = require('express');
 
 // Create our App
 var app = express();
+
+// app.use(express.static('public'));
+
+// app.listen(3000, function () {
+//   console.log('Server On');
+// });
+
 const PORT = process.env.PORT || 3000;
 
 app.use(function (req, res, next) {
