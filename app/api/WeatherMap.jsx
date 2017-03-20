@@ -9,7 +9,6 @@ module.exports = {
     var encodedCountryLocation = encodeURIComponent(data.countryLocation);
     var encodedStateLocation = encodeURIComponent(data.stateLocation);
     var requestUrl = `${WEATHER_MAP_URL}/${encodedCountryLocation}/${encodedStateLocation}.json`;
-    console.log("----", requestUrl);
     return axios.get(requestUrl).then(function (res) {
       if (typeof res.data.response.error === 'object') {
         throw new Error(res.data.response.error.description);
