@@ -1,14 +1,8 @@
 {
-  "name": "boilerplate",
+  "name": "react-weather",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
+  "description": "React app",
+  "main": "index.html",
   "dependencies": {
     "axios": "^0.15.3",
     "express": "^4.15.2",
@@ -28,5 +22,19 @@
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.14.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekdevinfo/React-Weather.git"
+  },
+  "author": "Abhishek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekdevinfo/React-Weather/issues"
+  },
+  "homepage": "https://github.com/abhishekdevinfo/React-Weather#readme"
 }

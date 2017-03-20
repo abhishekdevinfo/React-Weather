@@ -4,29 +4,21 @@ var WeatherForm = React.createClass({
   onFormSubmit: function (e) {
     e.preventDefault();
 
-    var data = {};
-    var countryLocation = this.refs.countryLocation.value;
-    var stateLocation = this.refs.stateLocation.value;
+    var location = this.refs.location.value;
 
-    if (countryLocation.length > 0 && stateLocation.length > 0) {
-      this.refs.countryLocation.value = '';
-      this.refs.stateLocation.value = '';
-      data.countryLocation = countryLocation;
-      data.stateLocation = stateLocation;
+    if (location.length > 0) {
+      this.refs.location.value = '';
+      this.props.onSearch(location);
     }
-
-    this.props.onSearch(data);
-    
   },
   render: function () {
     return (
-      <div>
-        <form onSubmit={this.onFormSubmit}>
-          <input type="text" ref="countryLocation" placeholder="Country Name"/>
-          <input type="text" ref="stateLocation" placeholder="State Name"/>
-          <button>Get Weather</button>
-        </form>
-      </div>
+        <div>
+          <form onSubmit={this.onFormSubmit}>
+            <input type="text" ref="location"/>
+            <button>Get Weather</button>
+          </form>
+        </div>
     );
   }
 });
