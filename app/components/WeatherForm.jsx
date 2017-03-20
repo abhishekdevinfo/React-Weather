@@ -13,7 +13,6 @@ var WeatherForm = React.createClass({
       this.refs.stateLocation.value = '';
       data.countryLocation = countryLocation;
       data.stateLocation = stateLocation;
-      console.log("======", countryLocation, stateLocation, data);
     }
 
     this.props.onSearch(data);
